@@ -51,16 +51,9 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/admin/login" element={<AdminLoginPage />} />
 
-          {/* Customer Routes (Open for quick reservation, protected on confirmation & management) */}
+          {/* Customer & Booking Routes */}
           <Route path="/book" element={<BookingPage />} />
-          <Route
-            path="/booking-confirmation/:id"
-            element={
-              <CustomerRoute>
-                <BookingConfirmationPage />
-              </CustomerRoute>
-            }
-          />
+          <Route path="/booking-confirmation/:id" element={<BookingConfirmationPage />} />
           <Route
             path="/my-bookings"
             element={

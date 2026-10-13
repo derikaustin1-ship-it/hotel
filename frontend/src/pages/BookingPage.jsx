@@ -130,9 +130,13 @@ const BookingPage = () => {
   const handleBookingSubmit = async (e) => {
     e.preventDefault();
 
-    if (!isAuthenticated) {
-      toastError('Please log in to complete your reservation.');
-      navigate(`/login?redirect=${encodeURIComponent(window.location.pathname + window.location.search)}`);
+    if (!guestName || guestName.trim().length < 2) {
+      toastError('Please enter guest full name.');
+      return;
+    }
+
+    if (!guestEmail || !guestEmail.includes('@')) {
+      toastError('Please enter a valid guest email address.');
       return;
     }
 
@@ -153,6 +157,9 @@ const BookingPage = () => {
         checkInDate,
         checkOutDate,
         guests: parseInt(guests, 10),
+        customerName: guestName.trim(),
+        customerEmail: guestEmail.trim(),
+        customerPhone: guestPhone.trim(),
         specialRequests,
         paymentMethod,
       };

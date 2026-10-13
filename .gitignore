@@ -1,3 +1,18 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Environment Variables
+.env
+.env*.local
+.env.production
+.env.development
+
+# Production Builds
+frontend/dist/
+frontend/dist-ssr/
+dist/
+
 # Maven / Java
 backend/target/
 backend/data/
@@ -6,12 +21,6 @@ backend/data/
 *.war
 *.ear
 *.log
-
-# Node / React
-frontend/node_modules/
-frontend/dist/
-frontend/dist-ssr/
-frontend/*.local
 
 # Logs
 npm-debug.log*
