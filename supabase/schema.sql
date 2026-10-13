@@ -237,6 +237,6 @@ ON CONFLICT (room_number) DO UPDATE SET
 INSERT INTO users (name, email, phone, password_hash, role)
 VALUES
 ('Grand Luxe Administrator', 'admin@hotel.com', '+1 (800) 589-3200',
- '$2a$10$Wq078FGhQCxZ8t318xb/W.kxrv8v4QWAs0p/Il0CQw7L15Zg1UX5y',
+ '$2a$10$ACZFpOWnG.khxGT/Lqn98uOUNzYNlmyVye2o4FFKwRVqOC0LiDx.m',
  'ADMIN')
 ON CONFLICT (email) DO NOTHING;

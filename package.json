@@ -9,7 +9,7 @@
     "dev": "node dev.js",
     "build": "npm run build --prefix frontend && node -e \"import('node:fs').then(fs => { try { fs.cpSync('frontend/dist', 'dist', { recursive: true }); } catch (e) {} })\"",
     "start": "node server.js",
-    "test": "node test/booking-system.test.js"
+    "test": "node test/booking-system.test.js && node test/e2e-http-verification.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.48.1",
